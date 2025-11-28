@@ -1,0 +1,35 @@
+<h2>Network Printer Sharing Windows 11</h2>
+<p>Firstly, I am not taking credit for this process. I just did some digging and found this in a help thread, and thought it would be good to make a copy of it so others can more easily find it.
+Shout out to the Anon on the Windows support thread that laid all of this out - he's the real hero. </p>
+
+<p>This is a guide on how to share a printer that is connected via USB over the local network to 
+  other computers on the network. This guide requires sharing login credentials to another users computer, so
+the proper way to do this would be to create a seperate user that explicitly is for printing that other users
+can "login" as. I am not doing that in this guide because I am lazy.</p> 
+
+<ol>
+  <li>First, ensure both PCs are <bold>connected to the same netowork.</bold></li>
+  <li>Set the network profile for both PCs to <bold>"Private Network."</bold></li>
+  <li>Allow <bold>"File and Printer Sharing"</bold> on both PCs' Firewall settings</li>
+  <li>On the Main PC, the one connected to the USB printer, open <bold>"Advanced Sharing Settings."</bold> Under
+  "All Networks," enable <bold>"Password protected sharing."</bold></li>
+  <li>To share the printer, on the <bold>Main PC</bold> go to Printers & Scanners > the printer > Printer Properties
+   > Sharing > and tick the <bold>Share this printer</bold> option whilst giving it a discoverable name.</li>
+  <li>On the <bold>Sub PC, the PC that is connecting via the network</bold>, open <bold>Credential Manager</bold> and 
+  click on <bold>Windows Credentials.</bold></li>
+  <li>Under Windows Credentials, click on <bold>"Add a Windows credential."</bold></li>
+  <li>You will see three input fields: <bold>Internet or network address, User name, and Password.</bold>
+    <ol>
+      <li><bold>Internet or network address:</bold> enter the ip address or PC name of the Main PC. Ensure you use
+      a double back slack before the address (\\192.168.X.X or \\DESKTOP-XXXXXXX)</li>
+      <li><bold>User name:</bold> Enter the account name of the Main BC. This account must have <bold>Administrator
+      Access.</bold></li>
+      <li><bold>Password:</bold>Enter the password of the account name.</li>
+    </ol>
+  </li>
+  <li>On the <bold>Sub PC</bold> open the Network folder. Turn on network discovery and file sharing.</li>
+  <li>Locate the Main PC's name. Double click on it, and you will see the shared printer.</li>
+  <li>Right-click on that printer and click "open." The printer will be installed.</li>
+</ol>
+
+<a href="https://learn.microsoft.com/en-us/answers/questions/4175993/printer-sharing-in-windows-11?page=2#answers" type="_">Source for this article</a>
